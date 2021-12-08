@@ -1,6 +1,8 @@
 #include "Employee.h"
 #include <string>
 
+
+
 // Initialization list constructor definition
 Employee::Employee(std::string employee_name, int new_accounts_sold, int upgrades_sold, double accessories_sold, int goal_reached) {
 	m_employee_name = employee_name;
@@ -11,6 +13,7 @@ Employee::Employee(std::string employee_name, int new_accounts_sold, int upgrade
 }
 
 
+//LO1a
 // Employee class method definitions
 void Employee::SetTotalCommissions() {
 	SetNewAccountCommissions();

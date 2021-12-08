@@ -17,16 +17,10 @@
 
 // main.cpp
 // Diego Grisales
-// 11/20/21
-// Integration Project - Milestone 2
+// 12/01/21
+// Integration Project 
 
 
-// Procedural Oriented Programming:
-// Program is divided into parts called functions.
-// Object Oriented Programming:
-// Program is divided into small parts called objects. 
-// Provides data hiding so it's more secure.
-// Allows for code reusability
 
 #include <exception>
 #include <limits>
@@ -123,10 +117,32 @@ int main() {
 }
 
 
+
+
+
+
+
+
+// LO3
+// In computer science, dynamic dispatch is the process of selecting which implementation of a polymorphic 
+// operation(method or function) to call at run time.It is commonly employed in, and considered a prime 
+// characteristic of, object - oriented programming(OOP) languages and systems.
+// https://en.wikipedia.org/wiki/Dynamic_dispatch
+
+
+//LO4
+// Procedural Oriented Programming:
+// Program is divided into parts called functions.
+// Object Oriented Programming:
+// Program is divided into small parts called objects. 
+// Provides data hiding so it's more secure.
+// Allows for code reusability
+
+
+// LO5
 // Inheritance: In Inheritance, there is a reuse of function.
 // A program having two functions p and q and we can say p is inherited from q if q has some function of p written.
 
 // Subtype : It refers to the compatibility of the interface.
 // In this, q is a subtype of p if every function that is used for invoking q can be used for invoking p as well.
-
 // https://stackoverflow.com/questions/23592131/what-is-the-difference-between-subtyping-and-inheritance-in-oo-programming

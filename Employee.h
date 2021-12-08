@@ -3,11 +3,16 @@
 #include <iostream>
 #include <string>
 
+// LO1
 // Base class
+// LO2
 // Employee is Abstract class, it cannot be instantiated since it contains pure virtual functions. 
 class Employee {
+	// LO2a
 	// private fields can only be accessed inside of the class
 	// protected fields can be accessed in superclass and subclasses (inheritance)
+
+	// LO6
 protected:
 	std::string m_employee_name{};
 	double m_new_accounts_sold{};
@@ -23,8 +28,10 @@ protected:
 
 	// Public fields and functions can be accessed inside and outside of the class
 public:
+	//LO1b
 	// default constructor
 	Employee() {}
+	//LO1c
 	// Initialization list constructor declaration, definition in Employee.cpp file
 	Employee(std::string employee_name, int new_accounts_sold, int upgrades_sold, double accessories_sold, int goal_reached);
 
