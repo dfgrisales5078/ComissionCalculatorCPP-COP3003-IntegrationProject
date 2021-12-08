@@ -1,3 +1,15 @@
+/** @file SalesAssociate.h
+
+ *  @brief SalesAssociate class is derived from Employee class,
+ *	it inherits and has access to fields and functions from Employee class.
+
+ *  @author Diego Grisales
+
+ *  @bug No known bugs.
+
+ */
+
+
 #pragma once
 #include "Employee.h"
 

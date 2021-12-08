@@ -1,3 +1,13 @@
+/** @file SalesAssociate.cpp
+
+ *  @brief LO1a methods from class header file implemented in the cpp file.
+
+ *  @author Diego Grisales
+
+ *  @bug No known bugs.
+
+ */
+
 #include "SalesAssociate.h"
 
 

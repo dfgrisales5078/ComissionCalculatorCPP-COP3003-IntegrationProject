@@ -1,25 +1,12 @@
 /** @file main.cpp
 
- *  @brief main 
-
- *
-
- *  Longer description of file.
-
- *
+ *  @brief main function of the COP 3003 - Integration Project
 
  *  @author Diego Grisales
 
  *  @bug No known bugs.
 
  */
-
-
-// main.cpp
-// Diego Grisales
-// 12/01/21
-// Integration Project 
-
 
 
 #include <exception>
@@ -29,7 +16,7 @@
 #include "SalesAssociate.h"
 
 
-int main() {
+int main(void) {
 
 	std::string employee_name{};
 	double new_accounts_sold{};
@@ -47,7 +34,7 @@ int main() {
 
 		// exception handling to make sure user will enter an integer or a double
 		try
-		{	
+		{
 
 			std::cin.exceptions(std::ios_base::failbit);
 			std::cout << "Enter number of new accounts sold: ";
@@ -64,7 +51,7 @@ int main() {
 				std::cout << "Enter sales goal reached (1 or 2): ";
 				std::cin >> goal_reached;
 			}
-			
+
 			std::cout << "If employee is a manager enter 1, if employee is a sales associate enter 2: ";
 			std::cin >> type_of_employee;
 			// while loop will run until user enters 1 or 2
@@ -74,7 +61,7 @@ int main() {
 			}
 
 		}
-		catch (std::exception & e)
+		catch (std::exception&)
 		{
 			std::cerr << "Incorrect data type entered. \n";
 			std::cin.clear();
@@ -109,10 +96,10 @@ int main() {
 			std::cin.clear();
 			std::cin.ignore();
 		}
-	
+
 
 	} while (loop_decision == 1);
-	
+
 	return 0;
 }
 
@@ -146,3 +133,13 @@ int main() {
 // Subtype : It refers to the compatibility of the interface.
 // In this, q is a subtype of p if every function that is used for invoking q can be used for invoking p as well.
 // https://stackoverflow.com/questions/23592131/what-is-the-difference-between-subtyping-and-inheritance-in-oo-programming
+
+
+
+// resources used:
+// https://www.learncpp.com/
+// https://www.cplusplus.com/
+// https://sites.google.com/site/profvanselow/course/cop-3003/projects-3003
+// https://en.cppreference.com/w/
+// https://devdocs.io/cpp/
+// https://edube.org/ -- (C++ Essentials – Part 2 (Intermediate))
