@@ -12,8 +12,14 @@
 #include "Employee.h"
 #include <string>
 
-
- // Initialization list constructor definition
+/**
+ * @brief Initialization list constructor definition.
+ * @param employee_name - name.
+ * @param new_accounts_sold - new accounts sold.
+ * @param upgrades_sold - upgrades sold.
+ * @param accessories_sold - dollar amount of accessories sold.
+ * @param goal_reached - goal reached (1 or 2).
+*/
 Employee::Employee(std::string employee_name, int new_accounts_sold, int upgrades_sold, double accessories_sold, int goal_reached) {
 	m_employee_name = employee_name;
 	m_new_accounts_sold = new_accounts_sold;
@@ -24,7 +30,15 @@ Employee::Employee(std::string employee_name, int new_accounts_sold, int upgrade
 
 
 
-// Employee class method definitions
+// Employee class method definitions:
+
+/**
+ * @brief Sets total employee's commission.
+ * 
+ * Calls other methods to set commissions from new accounts, 
+ * upgrades, and accessories sold. Then adds all of them together. 
+ * 
+*/
 void Employee::SetTotalCommissions() {
 	SetNewAccountCommissions();
 	SetUpgradeCommissions();
@@ -32,6 +46,14 @@ void Employee::SetTotalCommissions() {
 	m_total_commissions = m_new_account_commissions + m_upgrade_commissions + m_accessory_commissions;
 }
 
+
+/**
+ * @brief Gets employee's total commissions.
+ * 
+ * Calls the SetTotalCommissions method, then prints 
+ * detailed summary of the commissions for the employee. 
+ * 
+*/
 void Employee::GetTotalCommissions() {
 	SetTotalCommissions();
 
