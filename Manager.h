@@ -40,7 +40,7 @@ public:
 
 
 	/**
-	* @brief Overwritten function to set manager's new account commissions.
+	* @brief Overwritten function to calculate manager's new account commissions.
 	*
 	* The total new account commission is the number of new accounts
 	* sold times the commission per account depending on goal reached.
@@ -48,19 +48,19 @@ public:
 	* If manager reached goal 2, commission is $8 per new account.
 	*
 	*/
-	void SetNewAccountCommissions() noexcept override {
+	void NewAccountCommissions() noexcept override {
 
 
 		double commission_per_account{};
 		constexpr int NEW_ACCT_GOAL_1COMMISSION = 10;
 		constexpr int NEW_ACCT_GOAL_2COMMISSION = 8;
-		if (m_goal_reached == 1) {
+		if (GetGoalReached() == 1) {
 			commission_per_account = NEW_ACCT_GOAL_1COMMISSION;
 		}
 		else {
 			commission_per_account = NEW_ACCT_GOAL_2COMMISSION;
 		}
-		m_new_account_commissions = GetNewAccountsSold() * commission_per_account;
+		SetNewAccountCommissions(GetNewAccountsSold() * commission_per_account);
 
 	}
 
@@ -69,13 +69,13 @@ public:
 	*
 	* The total upgrade commission is the number of upgrades sold times $7.
 	*/
-	void SetUpgradeCommissions() noexcept override {
+	void UpgradeCommissions() noexcept override {
 		
-		m_upgrade_commissions = GetUpgradesSold() * UPGRADES_COMMISSION;
+		SetUpgradeCommissions(GetUpgradesSold() * UPGRADES_COMMISSION);
 	}
 
 	/**
-	* @brief Overwritten function to set manager's accessory commissions.
+	* @brief Overwritten function to calculate manager's accessory commissions.
 	*
 	* The total accessory commission is the dollar amount sold
 	* times the percentage of commission paid depending on goal reached.
@@ -83,15 +83,15 @@ public:
 	* If manager reached goal 2, commission is 16% of the dollar amount sold.
 	*
 	*/
-	void SetAccessoryCommissions() noexcept override {
+	void AccessoryCommissions() noexcept override {
 		double percentage_of_sales{};
-		if (m_goal_reached == 1) {
+		if (GetGoalReached() == 1) {
 			percentage_of_sales = EIGHTEEN_PERCENT;
 		}
 		else {
 			percentage_of_sales = SIXTEEN_PERCENT;
 		}
-		m_accessory_commissions = GetAccessoriesSold() * percentage_of_sales;
+		SetAccessoryCommissions(GetAccessoriesSold() * percentage_of_sales);
 	}
 
 	/**
@@ -101,11 +101,11 @@ public:
 	* upgrades, and accessories sold. Then adds all of them together.
 	 *
 	*/
-	void SetTotalCommissions() noexcept {
-		SetNewAccountCommissions();
-		SetUpgradeCommissions();
-		SetAccessoryCommissions();
-		m_total_commissions = GetNewAccountCommissions() + m_upgrade_commissions + m_accessory_commissions;
+	void TotalCommissions() noexcept {
+		NewAccountCommissions();
+		UpgradeCommissions();
+		AccessoryCommissions();
+		SetTotalCommissions(GetNewAccountCommissions() + GetUpgradeCommissions() + GetAccessoryCommissions());
 	}
 
 };

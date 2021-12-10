@@ -39,13 +39,13 @@ public:
 
 
 	// SalesAssociate class method declarations, definitions in SalesAssociate.cpp file
-	void SetNewAccountCommissions();
+	void NewAccountCommissions();
 
-	void SetUpgradeCommissions();
+	void UpgradeCommissions();
 
-	void SetAccessoryCommissions();
+	void AccessoryCommissions();
 
-	void SetTotalCommissions();
+	void TotalCommissions();
 };
 
 #endif

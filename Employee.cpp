@@ -39,11 +39,12 @@ Employee::Employee(std::string employee_name, int new_accounts_sold, int upgrade
  * upgrades, and accessories sold. Then adds all of them together. 
  * 
 */
-void Employee::SetTotalCommissions() {
-	SetNewAccountCommissions();
-	SetUpgradeCommissions();
-	SetAccessoryCommissions();
-	m_total_commissions = GetNewAccountCommissions() + m_upgrade_commissions + m_accessory_commissions;
+void Employee::TotalCommissions() {
+
+	NewAccountCommissions();
+	UpgradeCommissions();
+	AccessoryCommissions();
+	SetTotalCommissions(GetNewAccountCommissions() + GetUpgradeCommissions() + GetAccessoryCommissions());
 }
 
 
@@ -55,7 +56,7 @@ void Employee::SetTotalCommissions() {
  * 
 */
 void Employee::GetTotalCommissions() {
-	SetTotalCommissions();
+	TotalCommissions();
 
 	std::cout << "Commission summary for: " << m_employee_name << std::endl;
 	std::cout << "New account commissions: " << m_new_account_commissions << std::endl;

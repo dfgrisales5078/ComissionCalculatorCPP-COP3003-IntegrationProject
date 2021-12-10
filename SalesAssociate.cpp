@@ -23,28 +23,32 @@
  * If sales associate reached goal 2, commission is $7 per new account.
  *
 */
-void SalesAssociate::SetNewAccountCommissions() { 
+void SalesAssociate::NewAccountCommissions() { 
+	constexpr int NEW_ACCT_GOAL_1COMMISSION = 9;
+	constexpr int NEW_ACCT_GOAL_2COMMISSION = 7;
 	double commision_per_account{};
-	if (m_goal_reached == 1) {
-		commision_per_account = 9;
+	if (GetGoalReached() == 1) {
+		commision_per_account = NEW_ACCT_GOAL_1COMMISSION;
 	}
 	else {
-		commision_per_account = 7;
+		commision_per_account = NEW_ACCT_GOAL_2COMMISSION;
 	}
-	m_new_account_commissions = GetNewAccountsSold() * commision_per_account;
+	SetNewAccountCommissions(GetNewAccountsSold() * commision_per_account);
 }
 
 /**
- * @brief Overwritten function to set sales associate's upgrades commissions.
+ * @brief Overwritten function to calculate sales associate's upgrades commissions.
  *
  * The total upgrade commission is the number of upgrades sold times $6.
 */
-void SalesAssociate::SetUpgradeCommissions() {
-	m_upgrade_commissions = GetUpgradesSold() * 6;
+void SalesAssociate::UpgradeCommissions() {
+
+	SetUpgradeCommissions(GetUpgradesSold() * 6);
+
 }
 
 /**
- * @brief Overwritten function to set sales associate's accessory commissions.
+ * @brief Overwritten function to calculate sales associate's accessory commissions.
  *
  * The total accessory commission is the dollar amount sold
  * times the percentage of commission paid depending on goal reached.
@@ -52,17 +56,17 @@ void SalesAssociate::SetUpgradeCommissions() {
  * If sales associate reached goal 2, commission is 14% of the dollar amount sold.
  *
 */
-void SalesAssociate::SetAccessoryCommissions() {  
+void SalesAssociate::AccessoryCommissions() {  
+
 	double percentage_of_sales{};
-	if (m_goal_reached == 1) {
+	if (GetGoalReached() == 1) {
 		percentage_of_sales = 0.16;
 	}
 	else {
 		percentage_of_sales = 0.14;
 	}
-	m_accessory_commissions = GetAccessoriesSold() * percentage_of_sales;
+	SetAccessoryCommissions(GetAccessoriesSold() * percentage_of_sales);
 }
-
 
 /**
  * @brief Sets total employee's commission.
@@ -71,9 +75,10 @@ void SalesAssociate::SetAccessoryCommissions() {
  * upgrades, and accessories sold. Then adds all of them together.
  *
 */
-void SalesAssociate::SetTotalCommissions() {
-	SetNewAccountCommissions();
-	SetUpgradeCommissions();
-	SetAccessoryCommissions();
-	m_total_commissions = m_new_account_commissions + m_upgrade_commissions + m_accessory_commissions;
+void SalesAssociate::TotalCommissions() {
+
+	NewAccountCommissions();
+	UpgradeCommissions();
+	AccessoryCommissions();
+	SetTotalCommissions(GetNewAccountCommissions() + GetUpgradeCommissions() + GetAccessoryCommissions());
 }

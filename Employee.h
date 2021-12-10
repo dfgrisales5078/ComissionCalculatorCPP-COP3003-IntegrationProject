@@ -23,24 +23,17 @@ class Employee {
 	// LO2a
 	// private fields can only be accessed inside of the class.
 	// protected fields can be accessed in superclass and subclasses (inheritance).
+	// LO6
 private:
 	std::string m_employee_name{};
 	double m_new_accounts_sold{};
 	double m_upgrades_sold{};
 	double m_accessories_sold{};
-	
-
-
-protected:
-	// LO6
-	
-	
 	double m_new_account_commissions{};
-	
-	
 	double m_upgrade_commissions{};
 	double m_accessory_commissions{};
 	int m_goal_reached{};
+
 	double m_total_commissions{};
 
 	// Public fields and functions can be accessed inside and outside of the class.
@@ -103,30 +96,65 @@ public:
 		m_goal_reached = goal;
 	}
 
+	/**
+	 * @brief public function to set private member m_new_account_commissions outside of the class.
+	 * @param new_account_commissions 
+	*/
+	void SetNewAccountCommissions(double new_account_commissions) noexcept {
+		m_new_account_commissions = new_account_commissions;
+	}
+
+	/**
+	 * @brief public function to set private member m_upgrade_commissions outside of the class.
+	 * @param upgrade_commissions 
+	 * @return 
+	*/
+	void SetUpgradeCommissions (double upgrade_commissions) noexcept {
+		m_upgrade_commissions = upgrade_commissions;
+	}
+
+	/**
+	 * @brief public function to set private member m_accessory_commissions outside of the class.
+	 * @param accessory_commissions 
+	 * @return 
+	*/
+	void SetAccessoryCommissions(double accessory_commissions) noexcept {
+		m_accessory_commissions = accessory_commissions;
+	}
 
 	// Pure virtual methods - methods that exists only to be overwritten.
 	// Different definitions in Manager and SalesAssociate classes (polymorphism). 
 
 	/**
-	 * @brief sets commissions on new account sales.
+	 * @brief Calculates new account commissions.
 	*/
-	virtual void SetNewAccountCommissions() = 0;
+	virtual void NewAccountCommissions() = 0;
 
 	/**
-	 * @brief sets commissions on upgrade sales.
+	 * @brief Calculates commissions on upgrade sales.
 	*/
-	virtual void SetUpgradeCommissions() = 0;
+	virtual void UpgradeCommissions() = 0;
 
 	/**
-	 * @brief sets commisions on accessory sales.
+	 * @brief Calculates commisions on accessory sales.
 	*/
-	virtual void SetAccessoryCommissions() = 0;
+	virtual void AccessoryCommissions() = 0;
+
+	/**
+	 * @brief public function to set private member m_total_commissions outside of the class.
+	 * @param total_commissions 
+	 * @return 
+	*/
+
+	void SetTotalCommissions(double total_commissions) noexcept {
+		m_total_commissions = total_commissions;
+	}
 
 
 	/**
 	 * @brief Sets total employee's commission. Function defined in Employee.cpp.
 	*/
-	void SetTotalCommissions();
+	void TotalCommissions();
 
 	// get methods:
 
