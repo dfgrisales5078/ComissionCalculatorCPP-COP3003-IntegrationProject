@@ -11,7 +11,6 @@
 #include "SalesAssociate.h"
 
 
-
 // SalesAssociate class method definitions:
 
 
@@ -32,7 +31,7 @@ void SalesAssociate::SetNewAccountCommissions() {
 	else {
 		commision_per_account = 7;
 	}
-	m_new_account_commissions = m_new_accounts_sold * commision_per_account;
+	m_new_account_commissions = GetNewAccountsSold() * commision_per_account;
 }
 
 /**
@@ -41,7 +40,7 @@ void SalesAssociate::SetNewAccountCommissions() {
  * The total upgrade commission is the number of upgrades sold times $6.
 */
 void SalesAssociate::SetUpgradeCommissions() {
-	m_upgrade_commissions = m_upgrades_sold * 6;
+	m_upgrade_commissions = GetUpgradesSold() * 6;
 }
 
 /**
@@ -61,7 +60,7 @@ void SalesAssociate::SetAccessoryCommissions() {
 	else {
 		percentage_of_sales = 0.14;
 	}
-	m_accessory_commissions = m_accessories_sold * percentage_of_sales;
+	m_accessory_commissions = GetAccessoriesSold() * percentage_of_sales;
 }
 
 

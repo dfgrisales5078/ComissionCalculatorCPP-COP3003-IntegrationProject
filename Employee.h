@@ -8,7 +8,8 @@
 
  */
 
-#pragma once
+#ifndef EMPLOYEE_H
+#define EMPLOYEE_H
 
 #include <iostream>
 #include <string>
@@ -22,14 +23,21 @@ class Employee {
 	// LO2a
 	// private fields can only be accessed inside of the class.
 	// protected fields can be accessed in superclass and subclasses (inheritance).
-
-protected:
-	// LO6
+private:
 	std::string m_employee_name{};
 	double m_new_accounts_sold{};
 	double m_upgrades_sold{};
 	double m_accessories_sold{};
+	
+
+
+protected:
+	// LO6
+	
+	
 	double m_new_account_commissions{};
+	
+	
 	double m_upgrade_commissions{};
 	double m_accessory_commissions{};
 	int m_goal_reached{};
@@ -41,7 +49,7 @@ public:
 	/**
 	 * @brief LO1b default constructor.
 	*/
-	Employee() noexcept {}
+	Employee() noexcept = default;
 
 	/**
 	 * @brief LO1c Initialization list constructor declaration, definition in Employee.cpp file.
@@ -126,7 +134,7 @@ public:
 	 * @brief public function to get employee name.
 	 * @return - employee name. 
 	*/
-	std::string GetEmployeeName() {
+	auto GetEmployeeName() {
 		return m_employee_name;
 	}
 
@@ -134,7 +142,7 @@ public:
 	 * @brief public function to get number of new accounts sold.
 	 * @return - number of new accounts sold.
 	*/
-	double GetNewAccountsSold() noexcept {
+	auto GetNewAccountsSold() noexcept {
 		return m_new_accounts_sold;
 	}
 
@@ -194,3 +202,6 @@ public:
 	void GetTotalCommissions();
 
 };
+
+
+#endif

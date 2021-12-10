@@ -10,7 +10,8 @@
  */
 
 
-#pragma once
+#ifndef SALESASSOCIATE_H
+#define SALESASSOCIATE_H
 #include "Employee.h"
 
 
@@ -47,3 +48,4 @@ public:
 	void SetTotalCommissions();
 };
 
+#endif

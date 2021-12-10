@@ -21,10 +21,10 @@
  * @param goal_reached - goal reached (1 or 2).
 */
 Employee::Employee(std::string employee_name, int new_accounts_sold, int upgrades_sold, double accessories_sold, int goal_reached) {
-	m_employee_name = employee_name;
-	m_new_accounts_sold = new_accounts_sold;
-	m_upgrades_sold = upgrades_sold;
-	m_accessories_sold = accessories_sold;
+	SetEmployeeName(employee_name);
+	SetNewAccountsSold(new_accounts_sold);
+	SetUpgradesSold(upgrades_sold);
+	SetAccessoriesSold(accessories_sold);
 	m_goal_reached = goal_reached;
 }
 
@@ -43,7 +43,7 @@ void Employee::SetTotalCommissions() {
 	SetNewAccountCommissions();
 	SetUpgradeCommissions();
 	SetAccessoryCommissions();
-	m_total_commissions = m_new_account_commissions + m_upgrade_commissions + m_accessory_commissions;
+	m_total_commissions = GetNewAccountCommissions() + m_upgrade_commissions + m_accessory_commissions;
 }
 
 

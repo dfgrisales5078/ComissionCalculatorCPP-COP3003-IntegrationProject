@@ -16,7 +16,7 @@
 #include "SalesAssociate.h"
 
 
-int main(void) {
+int main() noexcept {
 
 	std::string employee_name{};
 	double new_accounts_sold{};
