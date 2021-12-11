@@ -11,3 +11,5 @@
 
 ### Project Class Diagram:
 
+![IntegrationProject](ClassDiagram.png)
+
