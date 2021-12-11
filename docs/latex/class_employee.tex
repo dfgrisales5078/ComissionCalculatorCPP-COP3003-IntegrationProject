@@ -1,0 +1,447 @@
+\hypertarget{class_employee}{}\doxysection{Employee Class Reference}
+\label{class_employee}\index{Employee@{Employee}}
+
+
+LO2 \mbox{\hyperlink{class_employee}{Employee}} is Abstract class, it cannot be instantiated since it contains pure virtual functions.  
+
+
+
+
+{\ttfamily \#include $<$Employee.\+h$>$}
+
+Inheritance diagram for Employee\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_employee}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_employee_a903de464b5f253aa60397e7b2ea6533d}\label{class_employee_a903de464b5f253aa60397e7b2ea6533d}} 
+{\bfseries Employee} () noexcept=default
+\begin{DoxyCompactList}\small\item\em LO1b default constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_employee_a759741c5736c35e643940fea4784a395}{Employee}} (std\+::string employee\+\_\+name, int new\+\_\+accounts\+\_\+sold, int upgrades\+\_\+sold, double accessories\+\_\+sold, int goal\+\_\+reached)
+\begin{DoxyCompactList}\small\item\em LO1c Initialization list constructor declaration, definition in \mbox{\hyperlink{_employee_8cpp}{Employee.\+cpp}} file. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_employee_a1a292492810b049449f3288103083b9b}{Set\+Employee\+Name}} (std\+::string name)
+\begin{DoxyCompactList}\small\item\em sets employee name. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_employee_a7dee4b857bc6fe83aa866a26ca431658}{Set\+New\+Accounts\+Sold}} (int new\+\_\+accounts) noexcept
+\begin{DoxyCompactList}\small\item\em sets the number of new accounts sold by employee. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_employee_a1161b0e9f49dd4f2cb2624d54b36c1ec}{Set\+Upgrades\+Sold}} (int upgrades) noexcept
+\begin{DoxyCompactList}\small\item\em sets the number of upgrades sold by employee. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_employee_ad675e318d4f6cb707b287bee2c46ee5f}{Set\+Accessories\+Sold}} (double accessories) noexcept
+\begin{DoxyCompactList}\small\item\em sets the number of accessories sold by employee. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_employee_ad69f2d70ff40c68d83a3174948db71f6}{Set\+Goal\+Reached}} (int goal\+\_\+reached) noexcept
+\begin{DoxyCompactList}\small\item\em sets the goal reached by employee. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_employee_aee9139285eb79541fde0e22979da90cd}{Set\+New\+Account\+Commissions}} (int new\+\_\+account\+\_\+commissions) noexcept
+\begin{DoxyCompactList}\small\item\em public function to set private member m\+\_\+new\+\_\+account\+\_\+commissions outside of the class. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_employee_ae46cd853942598baa48f11968d114d9b}{Set\+Upgrade\+Commissions}} (int upgrade\+\_\+commissions) noexcept
+\begin{DoxyCompactList}\small\item\em public function to set private member m\+\_\+upgrade\+\_\+commissions outside of the class. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_employee_a83cc7f9832a5fc9fd6bd296c7337e9bf}{Set\+Accessory\+Commissions}} (double accessory\+\_\+commissions) noexcept
+\begin{DoxyCompactList}\small\item\em public function to set private member m\+\_\+accessory\+\_\+commissions outside of the class. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_employee_ac1e19b6d2415acc2a529da0b72b81fea}{New\+Account\+Commissions}} ()=0
+\begin{DoxyCompactList}\small\item\em Calculates new account commissions. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_employee_aec18558739f48dc722363b8606e624b3}{Upgrade\+Commissions}} ()=0
+\begin{DoxyCompactList}\small\item\em Calculates commissions on upgrade sales. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_employee_a7ac97eee41d972251fd97c29a5cffe77}{Accessory\+Commissions}} ()=0
+\begin{DoxyCompactList}\small\item\em Calculates commisions on accessory sales. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_employee_a6fbadd1c8a0c56fa1b598983fa55cd40}{Set\+Total\+Commissions}} (double total\+\_\+commissions) noexcept
+\begin{DoxyCompactList}\small\item\em public function to set private member m\+\_\+total\+\_\+commissions outside of the class. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_employee_a52d2e30cd8053390ebca0bcc82340bc0}{Total\+Commissions}} ()
+\begin{DoxyCompactList}\small\item\em Sets total employee\textquotesingle{}s commission. Function defined in \mbox{\hyperlink{_employee_8cpp}{Employee.\+cpp}}. \end{DoxyCompactList}\item 
+auto \mbox{\hyperlink{class_employee_a221ecf163384d278067de05faf9ea2d8}{Get\+Employee\+Name}} ()
+\begin{DoxyCompactList}\small\item\em public function to get employee name. \end{DoxyCompactList}\item 
+auto \mbox{\hyperlink{class_employee_a132b0e38045e88cf66d10d0d4efb219f}{Get\+New\+Accounts\+Sold}} () noexcept
+\begin{DoxyCompactList}\small\item\em public function to get number of new accounts sold. \end{DoxyCompactList}\item 
+auto \mbox{\hyperlink{class_employee_ad173b3592f1ba045bf8e9cb8ae1ff762}{Get\+Upgrades\+Sold}} () noexcept
+\begin{DoxyCompactList}\small\item\em public function to get number of upgrades sold. \end{DoxyCompactList}\item 
+auto \mbox{\hyperlink{class_employee_ad7da12d6ba765d4bbe9eee508b35ea2f}{Get\+Accessories\+Sold}} () noexcept
+\begin{DoxyCompactList}\small\item\em public function to get total dollar amount of accessories sold. \end{DoxyCompactList}\item 
+auto \mbox{\hyperlink{class_employee_abc0b98f42ed5ea5edae2e1fecde35113}{Get\+Goal\+Reached}} () noexcept
+\begin{DoxyCompactList}\small\item\em public function to get the goal reached. \end{DoxyCompactList}\item 
+auto \mbox{\hyperlink{class_employee_a0572191ad50702dadb5ef7b98fdea2a8}{Get\+New\+Account\+Commissions}} () noexcept
+\begin{DoxyCompactList}\small\item\em public function to get total new account commissions. \end{DoxyCompactList}\item 
+auto \mbox{\hyperlink{class_employee_ae533558e802cc9cd4728b85e838a744c}{Get\+Upgrade\+Commissions}} () noexcept
+\begin{DoxyCompactList}\small\item\em public function to get total upgrade commissions. \end{DoxyCompactList}\item 
+auto \mbox{\hyperlink{class_employee_ac777f6d7248bf445897db42c36bd61d5}{Get\+Accessory\+Commissions}} () noexcept
+\begin{DoxyCompactList}\small\item\em public function to get total accessory commissions. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_employee_a58dae65bb448f8158157a431939d202b}{Get\+Total\+Commissions}} ()
+\begin{DoxyCompactList}\small\item\em public function to get total employee commissions. function defined in \mbox{\hyperlink{_employee_8cpp}{Employee.\+cpp}} file. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+LO2 \mbox{\hyperlink{class_employee}{Employee}} is Abstract class, it cannot be instantiated since it contains pure virtual functions. 
+
+\begin{DoxyAuthor}{Author}
+Diego Grisales 
+\end{DoxyAuthor}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_employee_a759741c5736c35e643940fea4784a395}\label{class_employee_a759741c5736c35e643940fea4784a395}} 
+\index{Employee@{Employee}!Employee@{Employee}}
+\index{Employee@{Employee}!Employee@{Employee}}
+\doxysubsubsection{\texorpdfstring{Employee()}{Employee()}}
+{\footnotesize\ttfamily Employee\+::\+Employee (\begin{DoxyParamCaption}\item[{std\+::string}]{employee\+\_\+name,  }\item[{int}]{new\+\_\+accounts\+\_\+sold,  }\item[{int}]{upgrades\+\_\+sold,  }\item[{double}]{accessories\+\_\+sold,  }\item[{int}]{goal\+\_\+reached }\end{DoxyParamCaption})}
+
+
+
+LO1c Initialization list constructor declaration, definition in \mbox{\hyperlink{_employee_8cpp}{Employee.\+cpp}} file. 
+
+Initialization list constructor definition.
+
+
+\begin{DoxyParams}{Parameters}
+{\em employee\+\_\+name} & -\/ name. \\
+\hline
+{\em new\+\_\+accounts\+\_\+sold} & -\/ new accounts sold. \\
+\hline
+{\em upgrades\+\_\+sold} & -\/ upgrades sold. \\
+\hline
+{\em accessories\+\_\+sold} & -\/ dollar amount of accessories sold. \\
+\hline
+{\em goal\+\_\+reached} & -\/ goal reached (1 or 2). \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_employee_a7ac97eee41d972251fd97c29a5cffe77}\label{class_employee_a7ac97eee41d972251fd97c29a5cffe77}} 
+\index{Employee@{Employee}!AccessoryCommissions@{AccessoryCommissions}}
+\index{AccessoryCommissions@{AccessoryCommissions}!Employee@{Employee}}
+\doxysubsubsection{\texorpdfstring{AccessoryCommissions()}{AccessoryCommissions()}}
+{\footnotesize\ttfamily virtual void Employee\+::\+Accessory\+Commissions (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Calculates commisions on accessory sales. 
+
+
+
+Implemented in \mbox{\hyperlink{class_manager_a687bae347d87b72850f0ba9a654ccff7}{Manager}}, and \mbox{\hyperlink{class_sales_associate_a921cc9e28c0a997c877120903c79fd2c}{Sales\+Associate}}.
+
+\mbox{\Hypertarget{class_employee_ad7da12d6ba765d4bbe9eee508b35ea2f}\label{class_employee_ad7da12d6ba765d4bbe9eee508b35ea2f}} 
+\index{Employee@{Employee}!GetAccessoriesSold@{GetAccessoriesSold}}
+\index{GetAccessoriesSold@{GetAccessoriesSold}!Employee@{Employee}}
+\doxysubsubsection{\texorpdfstring{GetAccessoriesSold()}{GetAccessoriesSold()}}
+{\footnotesize\ttfamily auto Employee\+::\+Get\+Accessories\+Sold (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+public function to get total dollar amount of accessories sold. 
+
+\begin{DoxyReturn}{Returns}
+-\/ dollar amount of accessories sold. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_employee_ac777f6d7248bf445897db42c36bd61d5}\label{class_employee_ac777f6d7248bf445897db42c36bd61d5}} 
+\index{Employee@{Employee}!GetAccessoryCommissions@{GetAccessoryCommissions}}
+\index{GetAccessoryCommissions@{GetAccessoryCommissions}!Employee@{Employee}}
+\doxysubsubsection{\texorpdfstring{GetAccessoryCommissions()}{GetAccessoryCommissions()}}
+{\footnotesize\ttfamily auto Employee\+::\+Get\+Accessory\+Commissions (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+public function to get total accessory commissions. 
+
+\begin{DoxyReturn}{Returns}
+total accessory commissions. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_employee_a221ecf163384d278067de05faf9ea2d8}\label{class_employee_a221ecf163384d278067de05faf9ea2d8}} 
+\index{Employee@{Employee}!GetEmployeeName@{GetEmployeeName}}
+\index{GetEmployeeName@{GetEmployeeName}!Employee@{Employee}}
+\doxysubsubsection{\texorpdfstring{GetEmployeeName()}{GetEmployeeName()}}
+{\footnotesize\ttfamily auto Employee\+::\+Get\+Employee\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+public function to get employee name. 
+
+\begin{DoxyReturn}{Returns}
+-\/ employee name. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_employee_abc0b98f42ed5ea5edae2e1fecde35113}\label{class_employee_abc0b98f42ed5ea5edae2e1fecde35113}} 
+\index{Employee@{Employee}!GetGoalReached@{GetGoalReached}}
+\index{GetGoalReached@{GetGoalReached}!Employee@{Employee}}
+\doxysubsubsection{\texorpdfstring{GetGoalReached()}{GetGoalReached()}}
+{\footnotesize\ttfamily auto Employee\+::\+Get\+Goal\+Reached (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+public function to get the goal reached. 
+
+\begin{DoxyReturn}{Returns}
+-\/ goal reached. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_employee_a0572191ad50702dadb5ef7b98fdea2a8}\label{class_employee_a0572191ad50702dadb5ef7b98fdea2a8}} 
+\index{Employee@{Employee}!GetNewAccountCommissions@{GetNewAccountCommissions}}
+\index{GetNewAccountCommissions@{GetNewAccountCommissions}!Employee@{Employee}}
+\doxysubsubsection{\texorpdfstring{GetNewAccountCommissions()}{GetNewAccountCommissions()}}
+{\footnotesize\ttfamily auto Employee\+::\+Get\+New\+Account\+Commissions (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+public function to get total new account commissions. 
+
+\begin{DoxyReturn}{Returns}
+-\/ total new account commissions. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_employee_a132b0e38045e88cf66d10d0d4efb219f}\label{class_employee_a132b0e38045e88cf66d10d0d4efb219f}} 
+\index{Employee@{Employee}!GetNewAccountsSold@{GetNewAccountsSold}}
+\index{GetNewAccountsSold@{GetNewAccountsSold}!Employee@{Employee}}
+\doxysubsubsection{\texorpdfstring{GetNewAccountsSold()}{GetNewAccountsSold()}}
+{\footnotesize\ttfamily auto Employee\+::\+Get\+New\+Accounts\+Sold (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+public function to get number of new accounts sold. 
+
+\begin{DoxyReturn}{Returns}
+-\/ number of new accounts sold. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_employee_a58dae65bb448f8158157a431939d202b}\label{class_employee_a58dae65bb448f8158157a431939d202b}} 
+\index{Employee@{Employee}!GetTotalCommissions@{GetTotalCommissions}}
+\index{GetTotalCommissions@{GetTotalCommissions}!Employee@{Employee}}
+\doxysubsubsection{\texorpdfstring{GetTotalCommissions()}{GetTotalCommissions()}}
+{\footnotesize\ttfamily void Employee\+::\+Get\+Total\+Commissions (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+public function to get total employee commissions. function defined in \mbox{\hyperlink{_employee_8cpp}{Employee.\+cpp}} file. 
+
+Gets employee\textquotesingle{}s total commissions.
+
+Calls the Set\+Total\+Commissions method, then prints detailed summary of the commissions for the employee. \mbox{\Hypertarget{class_employee_ae533558e802cc9cd4728b85e838a744c}\label{class_employee_ae533558e802cc9cd4728b85e838a744c}} 
+\index{Employee@{Employee}!GetUpgradeCommissions@{GetUpgradeCommissions}}
+\index{GetUpgradeCommissions@{GetUpgradeCommissions}!Employee@{Employee}}
+\doxysubsubsection{\texorpdfstring{GetUpgradeCommissions()}{GetUpgradeCommissions()}}
+{\footnotesize\ttfamily auto Employee\+::\+Get\+Upgrade\+Commissions (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+public function to get total upgrade commissions. 
+
+\begin{DoxyReturn}{Returns}
+-\/ total upgrade commissions. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_employee_ad173b3592f1ba045bf8e9cb8ae1ff762}\label{class_employee_ad173b3592f1ba045bf8e9cb8ae1ff762}} 
+\index{Employee@{Employee}!GetUpgradesSold@{GetUpgradesSold}}
+\index{GetUpgradesSold@{GetUpgradesSold}!Employee@{Employee}}
+\doxysubsubsection{\texorpdfstring{GetUpgradesSold()}{GetUpgradesSold()}}
+{\footnotesize\ttfamily auto Employee\+::\+Get\+Upgrades\+Sold (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+public function to get number of upgrades sold. 
+
+\begin{DoxyReturn}{Returns}
+-\/ number of upgrades sold. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_employee_ac1e19b6d2415acc2a529da0b72b81fea}\label{class_employee_ac1e19b6d2415acc2a529da0b72b81fea}} 
+\index{Employee@{Employee}!NewAccountCommissions@{NewAccountCommissions}}
+\index{NewAccountCommissions@{NewAccountCommissions}!Employee@{Employee}}
+\doxysubsubsection{\texorpdfstring{NewAccountCommissions()}{NewAccountCommissions()}}
+{\footnotesize\ttfamily virtual void Employee\+::\+New\+Account\+Commissions (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Calculates new account commissions. 
+
+
+
+Implemented in \mbox{\hyperlink{class_manager_a6d94ae50fa38cfe254f29136bd481f3f}{Manager}}, and \mbox{\hyperlink{class_sales_associate_ae44be8a53e1ef7cf51ee3c80338f9a62}{Sales\+Associate}}.
+
+\mbox{\Hypertarget{class_employee_ad675e318d4f6cb707b287bee2c46ee5f}\label{class_employee_ad675e318d4f6cb707b287bee2c46ee5f}} 
+\index{Employee@{Employee}!SetAccessoriesSold@{SetAccessoriesSold}}
+\index{SetAccessoriesSold@{SetAccessoriesSold}!Employee@{Employee}}
+\doxysubsubsection{\texorpdfstring{SetAccessoriesSold()}{SetAccessoriesSold()}}
+{\footnotesize\ttfamily void Employee\+::\+Set\+Accessories\+Sold (\begin{DoxyParamCaption}\item[{double}]{accessories }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+sets the number of accessories sold by employee. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em accessories} & -\/ accessories sold. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_employee_a83cc7f9832a5fc9fd6bd296c7337e9bf}\label{class_employee_a83cc7f9832a5fc9fd6bd296c7337e9bf}} 
+\index{Employee@{Employee}!SetAccessoryCommissions@{SetAccessoryCommissions}}
+\index{SetAccessoryCommissions@{SetAccessoryCommissions}!Employee@{Employee}}
+\doxysubsubsection{\texorpdfstring{SetAccessoryCommissions()}{SetAccessoryCommissions()}}
+{\footnotesize\ttfamily void Employee\+::\+Set\+Accessory\+Commissions (\begin{DoxyParamCaption}\item[{double}]{accessory\+\_\+commissions }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+public function to set private member m\+\_\+accessory\+\_\+commissions outside of the class. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em accessory\+\_\+commissions} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_employee_a1a292492810b049449f3288103083b9b}\label{class_employee_a1a292492810b049449f3288103083b9b}} 
+\index{Employee@{Employee}!SetEmployeeName@{SetEmployeeName}}
+\index{SetEmployeeName@{SetEmployeeName}!Employee@{Employee}}
+\doxysubsubsection{\texorpdfstring{SetEmployeeName()}{SetEmployeeName()}}
+{\footnotesize\ttfamily void Employee\+::\+Set\+Employee\+Name (\begin{DoxyParamCaption}\item[{std\+::string}]{name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+sets employee name. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & -\/ name of employee. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_employee_ad69f2d70ff40c68d83a3174948db71f6}\label{class_employee_ad69f2d70ff40c68d83a3174948db71f6}} 
+\index{Employee@{Employee}!SetGoalReached@{SetGoalReached}}
+\index{SetGoalReached@{SetGoalReached}!Employee@{Employee}}
+\doxysubsubsection{\texorpdfstring{SetGoalReached()}{SetGoalReached()}}
+{\footnotesize\ttfamily void Employee\+::\+Set\+Goal\+Reached (\begin{DoxyParamCaption}\item[{int}]{goal\+\_\+reached }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+sets the goal reached by employee. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em goal} & -\/ goal reached (1 or 2). \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_employee_aee9139285eb79541fde0e22979da90cd}\label{class_employee_aee9139285eb79541fde0e22979da90cd}} 
+\index{Employee@{Employee}!SetNewAccountCommissions@{SetNewAccountCommissions}}
+\index{SetNewAccountCommissions@{SetNewAccountCommissions}!Employee@{Employee}}
+\doxysubsubsection{\texorpdfstring{SetNewAccountCommissions()}{SetNewAccountCommissions()}}
+{\footnotesize\ttfamily void Employee\+::\+Set\+New\+Account\+Commissions (\begin{DoxyParamCaption}\item[{int}]{new\+\_\+account\+\_\+commissions }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+public function to set private member m\+\_\+new\+\_\+account\+\_\+commissions outside of the class. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em new\+\_\+account\+\_\+commissions} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_employee_a7dee4b857bc6fe83aa866a26ca431658}\label{class_employee_a7dee4b857bc6fe83aa866a26ca431658}} 
+\index{Employee@{Employee}!SetNewAccountsSold@{SetNewAccountsSold}}
+\index{SetNewAccountsSold@{SetNewAccountsSold}!Employee@{Employee}}
+\doxysubsubsection{\texorpdfstring{SetNewAccountsSold()}{SetNewAccountsSold()}}
+{\footnotesize\ttfamily void Employee\+::\+Set\+New\+Accounts\+Sold (\begin{DoxyParamCaption}\item[{int}]{new\+\_\+accounts }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+sets the number of new accounts sold by employee. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em new\+\_\+accounts} & -\/ new accounts sold. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_employee_a6fbadd1c8a0c56fa1b598983fa55cd40}\label{class_employee_a6fbadd1c8a0c56fa1b598983fa55cd40}} 
+\index{Employee@{Employee}!SetTotalCommissions@{SetTotalCommissions}}
+\index{SetTotalCommissions@{SetTotalCommissions}!Employee@{Employee}}
+\doxysubsubsection{\texorpdfstring{SetTotalCommissions()}{SetTotalCommissions()}}
+{\footnotesize\ttfamily void Employee\+::\+Set\+Total\+Commissions (\begin{DoxyParamCaption}\item[{double}]{total\+\_\+commissions }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+public function to set private member m\+\_\+total\+\_\+commissions outside of the class. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em total\+\_\+commissions} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_employee_ae46cd853942598baa48f11968d114d9b}\label{class_employee_ae46cd853942598baa48f11968d114d9b}} 
+\index{Employee@{Employee}!SetUpgradeCommissions@{SetUpgradeCommissions}}
+\index{SetUpgradeCommissions@{SetUpgradeCommissions}!Employee@{Employee}}
+\doxysubsubsection{\texorpdfstring{SetUpgradeCommissions()}{SetUpgradeCommissions()}}
+{\footnotesize\ttfamily void Employee\+::\+Set\+Upgrade\+Commissions (\begin{DoxyParamCaption}\item[{int}]{upgrade\+\_\+commissions }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+public function to set private member m\+\_\+upgrade\+\_\+commissions outside of the class. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em upgrade\+\_\+commissions} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_employee_a1161b0e9f49dd4f2cb2624d54b36c1ec}\label{class_employee_a1161b0e9f49dd4f2cb2624d54b36c1ec}} 
+\index{Employee@{Employee}!SetUpgradesSold@{SetUpgradesSold}}
+\index{SetUpgradesSold@{SetUpgradesSold}!Employee@{Employee}}
+\doxysubsubsection{\texorpdfstring{SetUpgradesSold()}{SetUpgradesSold()}}
+{\footnotesize\ttfamily void Employee\+::\+Set\+Upgrades\+Sold (\begin{DoxyParamCaption}\item[{int}]{upgrades }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+sets the number of upgrades sold by employee. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em upgrades} & -\/ upgrades sold. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_employee_a52d2e30cd8053390ebca0bcc82340bc0}\label{class_employee_a52d2e30cd8053390ebca0bcc82340bc0}} 
+\index{Employee@{Employee}!TotalCommissions@{TotalCommissions}}
+\index{TotalCommissions@{TotalCommissions}!Employee@{Employee}}
+\doxysubsubsection{\texorpdfstring{TotalCommissions()}{TotalCommissions()}}
+{\footnotesize\ttfamily void Employee\+::\+Total\+Commissions (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Sets total employee\textquotesingle{}s commission. Function defined in \mbox{\hyperlink{_employee_8cpp}{Employee.\+cpp}}. 
+
+Calculates total employee\textquotesingle{}s commission.
+
+Calls other methods to set commissions from new accounts, upgrades, and accessories sold. Then adds all of them together. 
+
+Reimplemented in \mbox{\hyperlink{class_manager_a5c2bb79843a21dc15ef8d635a7bd1507}{Manager}}, and \mbox{\hyperlink{class_sales_associate_a935904b574b9256f540e5d5f560c71cd}{Sales\+Associate}}.
+
+\mbox{\Hypertarget{class_employee_aec18558739f48dc722363b8606e624b3}\label{class_employee_aec18558739f48dc722363b8606e624b3}} 
+\index{Employee@{Employee}!UpgradeCommissions@{UpgradeCommissions}}
+\index{UpgradeCommissions@{UpgradeCommissions}!Employee@{Employee}}
+\doxysubsubsection{\texorpdfstring{UpgradeCommissions()}{UpgradeCommissions()}}
+{\footnotesize\ttfamily virtual void Employee\+::\+Upgrade\+Commissions (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Calculates commissions on upgrade sales. 
+
+
+
+Implemented in \mbox{\hyperlink{class_manager_a2454333f22ee5afd94da652b5db892ee}{Manager}}, and \mbox{\hyperlink{class_sales_associate_a1ae5b4e15f757c9010b6556ca222023f}{Sales\+Associate}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/diego/\+One\+Drive -\/ Florida Gulf Coast University/\+Visual\+Studio/\+Integration\+Project/\mbox{\hyperlink{_employee_8h}{Employee.\+h}}\item 
+C\+:/\+Users/diego/\+One\+Drive -\/ Florida Gulf Coast University/\+Visual\+Studio/\+Integration\+Project/\mbox{\hyperlink{_employee_8cpp}{Employee.\+cpp}}\end{DoxyCompactItemize}

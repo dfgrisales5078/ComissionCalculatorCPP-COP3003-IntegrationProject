@@ -1,0 +1,67 @@
+\hypertarget{_manager_8h_source}{}\doxysection{Manager.\+h}
+\label{_manager_8h_source}\index{C:/Users/diego/OneDrive -\/ Florida Gulf Coast University/VisualStudio/IntegrationProject/Manager.h@{C:/Users/diego/OneDrive -\/ Florida Gulf Coast University/VisualStudio/IntegrationProject/Manager.h}}
+\mbox{\hyperlink{_manager_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 }
+\DoxyCodeLine{12 \textcolor{preprocessor}{\#ifndef MANAGER\_H}}
+\DoxyCodeLine{13 \textcolor{preprocessor}{\#define MANAGER\_H}}
+\DoxyCodeLine{14 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_employee_8h}{Employee.h}}"{}}}
+\DoxyCodeLine{15 }
+\DoxyCodeLine{16 }
+\DoxyCodeLine{17 }
+\DoxyCodeLine{18 \textcolor{keyword}{constexpr} \textcolor{keywordtype}{int} UPGRADES\_COMMISSION = 7;}
+\DoxyCodeLine{19 }
+\DoxyCodeLine{20 \textcolor{keyword}{class }\mbox{\hyperlink{class_manager}{Manager}} : \textcolor{keyword}{public} \mbox{\hyperlink{class_employee}{Employee}} \{}
+\DoxyCodeLine{21 }
+\DoxyCodeLine{22 \textcolor{keyword}{public}:}
+\DoxyCodeLine{26     \mbox{\hyperlink{class_manager_a36c61318d9534581fdf7821a0c886d42}{Manager}}() noexcept = default;}
+\DoxyCodeLine{27 }
+\DoxyCodeLine{36     \mbox{\hyperlink{class_manager}{Manager}}(std::\textcolor{keywordtype}{string} employee\_name, \textcolor{keywordtype}{int} new\_accounts\_sold, \textcolor{keywordtype}{int} upgrades\_sold, \textcolor{keywordtype}{double} accessories\_sold, \textcolor{keywordtype}{int} goal\_reached)}
+\DoxyCodeLine{37         : \mbox{\hyperlink{class_employee}{Employee}}\{ employee\_name, new\_accounts\_sold, upgrades\_sold, accessories\_sold, goal\_reached \} \{ \}}
+\DoxyCodeLine{38 }
+\DoxyCodeLine{39 }
+\DoxyCodeLine{49     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_manager_a6d94ae50fa38cfe254f29136bd481f3f}{NewAccountCommissions}}() noexcept\textcolor{keyword}{ override }\{}
+\DoxyCodeLine{50 }
+\DoxyCodeLine{51         \textcolor{keywordtype}{double} commission\_per\_account\{\};}
+\DoxyCodeLine{52         \textcolor{keyword}{constexpr} \textcolor{keywordtype}{int} NEW\_ACCT\_GOAL\_1COMMISSION = 10;}
+\DoxyCodeLine{53         \textcolor{keyword}{constexpr} \textcolor{keywordtype}{int} NEW\_ACCT\_GOAL\_2COMMISSION = 8;}
+\DoxyCodeLine{54         \textcolor{keywordflow}{if} (\mbox{\hyperlink{class_employee_abc0b98f42ed5ea5edae2e1fecde35113}{GetGoalReached}}() == 1) \{}
+\DoxyCodeLine{55             commission\_per\_account = NEW\_ACCT\_GOAL\_1COMMISSION;}
+\DoxyCodeLine{56         \}}
+\DoxyCodeLine{57         \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{58             commission\_per\_account = NEW\_ACCT\_GOAL\_2COMMISSION;}
+\DoxyCodeLine{59         \}}
+\DoxyCodeLine{60         \mbox{\hyperlink{class_employee_aee9139285eb79541fde0e22979da90cd}{SetNewAccountCommissions}}(\mbox{\hyperlink{class_employee_a132b0e38045e88cf66d10d0d4efb219f}{GetNewAccountsSold}}() * commission\_per\_account);}
+\DoxyCodeLine{61 }
+\DoxyCodeLine{62     \}}
+\DoxyCodeLine{63 }
+\DoxyCodeLine{69     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_manager_a2454333f22ee5afd94da652b5db892ee}{UpgradeCommissions}}() noexcept\textcolor{keyword}{ override }\{}
+\DoxyCodeLine{70         }
+\DoxyCodeLine{71         \mbox{\hyperlink{class_employee_ae46cd853942598baa48f11968d114d9b}{SetUpgradeCommissions}}(\mbox{\hyperlink{class_employee_ad173b3592f1ba045bf8e9cb8ae1ff762}{GetUpgradesSold}}() * UPGRADES\_COMMISSION);}
+\DoxyCodeLine{72     \}}
+\DoxyCodeLine{73 }
+\DoxyCodeLine{83     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_manager_a687bae347d87b72850f0ba9a654ccff7}{AccessoryCommissions}}() noexcept\textcolor{keyword}{ override }\{}
+\DoxyCodeLine{84         \textcolor{keyword}{constexpr} \textcolor{keywordtype}{double} EIGHTEEN\_PERCENT = 0.18;}
+\DoxyCodeLine{85         \textcolor{keyword}{constexpr} \textcolor{keywordtype}{double} SIXTEEN\_PERCENT = 0.16;}
+\DoxyCodeLine{86         \textcolor{keywordtype}{double} percentage\_of\_sales\{\};}
+\DoxyCodeLine{87         \textcolor{keywordflow}{if} (\mbox{\hyperlink{class_employee_abc0b98f42ed5ea5edae2e1fecde35113}{GetGoalReached}}() == 1) \{}
+\DoxyCodeLine{88             percentage\_of\_sales = EIGHTEEN\_PERCENT;}
+\DoxyCodeLine{89         \}}
+\DoxyCodeLine{90         \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{91             percentage\_of\_sales = SIXTEEN\_PERCENT;}
+\DoxyCodeLine{92         \}}
+\DoxyCodeLine{93         \mbox{\hyperlink{class_employee_a83cc7f9832a5fc9fd6bd296c7337e9bf}{SetAccessoryCommissions}}(\mbox{\hyperlink{class_employee_ad7da12d6ba765d4bbe9eee508b35ea2f}{GetAccessoriesSold}}() * percentage\_of\_sales);}
+\DoxyCodeLine{94     \}}
+\DoxyCodeLine{95 }
+\DoxyCodeLine{103     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_manager_a5c2bb79843a21dc15ef8d635a7bd1507}{TotalCommissions}}() noexcept\textcolor{keyword}{ override }\{}
+\DoxyCodeLine{104         \mbox{\hyperlink{class_manager_a6d94ae50fa38cfe254f29136bd481f3f}{NewAccountCommissions}}();}
+\DoxyCodeLine{105         \mbox{\hyperlink{class_manager_a2454333f22ee5afd94da652b5db892ee}{UpgradeCommissions}}();}
+\DoxyCodeLine{106         \mbox{\hyperlink{class_manager_a687bae347d87b72850f0ba9a654ccff7}{AccessoryCommissions}}();}
+\DoxyCodeLine{107         \mbox{\hyperlink{class_employee_a6fbadd1c8a0c56fa1b598983fa55cd40}{SetTotalCommissions}}(\mbox{\hyperlink{class_employee_a0572191ad50702dadb5ef7b98fdea2a8}{GetNewAccountCommissions}}() + \mbox{\hyperlink{class_employee_ae533558e802cc9cd4728b85e838a744c}{GetUpgradeCommissions}}() + \mbox{\hyperlink{class_employee_ac777f6d7248bf445897db42c36bd61d5}{GetAccessoryCommissions}}());}
+\DoxyCodeLine{108     \}}
+\DoxyCodeLine{109 }
+\DoxyCodeLine{110 \};}
+\DoxyCodeLine{111 }
+\DoxyCodeLine{112 \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

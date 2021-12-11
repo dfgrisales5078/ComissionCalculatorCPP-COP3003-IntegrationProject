@@ -1,0 +1,67 @@
+\hypertarget{_sales_associate_8h_source}{}\doxysection{Sales\+Associate.\+h}
+\label{_sales_associate_8h_source}\index{C:/Users/diego/OneDrive -\/ Florida Gulf Coast University/VisualStudio/IntegrationProject/SalesAssociate.h@{C:/Users/diego/OneDrive -\/ Florida Gulf Coast University/VisualStudio/IntegrationProject/SalesAssociate.h}}
+\mbox{\hyperlink{_sales_associate_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 }
+\DoxyCodeLine{13 \textcolor{preprocessor}{\#ifndef SALESASSOCIATE\_H}}
+\DoxyCodeLine{14 \textcolor{preprocessor}{\#define SALESASSOCIATE\_H}}
+\DoxyCodeLine{15 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_employee_8h}{Employee.h}}"{}}}
+\DoxyCodeLine{16 }
+\DoxyCodeLine{17 }
+\DoxyCodeLine{18 \textcolor{comment}{// Since the SalesAssociate class is derived from Employee class, }}
+\DoxyCodeLine{19 \textcolor{comment}{// it inherits and has access to fields and functions from Employee class.}}
+\DoxyCodeLine{20 }
+\DoxyCodeLine{21 \textcolor{keyword}{class }\mbox{\hyperlink{class_sales_associate}{SalesAssociate}} : \textcolor{keyword}{public} \mbox{\hyperlink{class_employee}{Employee}} \{}
+\DoxyCodeLine{22 }
+\DoxyCodeLine{23 \textcolor{keyword}{public}:}
+\DoxyCodeLine{27     \mbox{\hyperlink{class_sales_associate_a9c6444a6b94de8a159d9cd839f99f476}{SalesAssociate}}() noexcept = default;}
+\DoxyCodeLine{28 }
+\DoxyCodeLine{37     \mbox{\hyperlink{class_sales_associate}{SalesAssociate}}(std::\textcolor{keywordtype}{string} employee\_name, \textcolor{keywordtype}{int} new\_accounts\_sold, \textcolor{keywordtype}{int} upgrades\_sold, \textcolor{keywordtype}{double} accessories\_sold, \textcolor{keywordtype}{int} goal\_reached)}
+\DoxyCodeLine{38         : \mbox{\hyperlink{class_employee}{Employee}}\{ employee\_name, new\_accounts\_sold, upgrades\_sold, accessories\_sold, goal\_reached \} \{ \}}
+\DoxyCodeLine{39 }
+\DoxyCodeLine{49     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_sales_associate_ae44be8a53e1ef7cf51ee3c80338f9a62}{NewAccountCommissions}}() noexcept\textcolor{keyword}{ override }\{}
+\DoxyCodeLine{50         \textcolor{keyword}{constexpr} \textcolor{keywordtype}{int} NEW\_ACCT\_GOAL\_1COMMISSION = 9;}
+\DoxyCodeLine{51         \textcolor{keyword}{constexpr} \textcolor{keywordtype}{int} NEW\_ACCT\_GOAL\_2COMMISSION = 7;}
+\DoxyCodeLine{52         \textcolor{keywordtype}{double} commision\_per\_account\{\};}
+\DoxyCodeLine{53         \textcolor{keywordflow}{if} (\mbox{\hyperlink{class_employee_abc0b98f42ed5ea5edae2e1fecde35113}{GetGoalReached}}() == 1) \{}
+\DoxyCodeLine{54             commision\_per\_account = NEW\_ACCT\_GOAL\_1COMMISSION;}
+\DoxyCodeLine{55         \}}
+\DoxyCodeLine{56         \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{57             commision\_per\_account = NEW\_ACCT\_GOAL\_2COMMISSION;}
+\DoxyCodeLine{58         \}}
+\DoxyCodeLine{59         \mbox{\hyperlink{class_employee_aee9139285eb79541fde0e22979da90cd}{SetNewAccountCommissions}}(\mbox{\hyperlink{class_employee_a132b0e38045e88cf66d10d0d4efb219f}{GetNewAccountsSold}}() * commision\_per\_account);}
+\DoxyCodeLine{60     \}}
+\DoxyCodeLine{61 }
+\DoxyCodeLine{67     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_sales_associate_a1ae5b4e15f757c9010b6556ca222023f}{UpgradeCommissions}}() noexcept\textcolor{keyword}{ override }\{}
+\DoxyCodeLine{68 }
+\DoxyCodeLine{69         \textcolor{keyword}{constexpr} \textcolor{keywordtype}{int} UPGRADES\_COMMISSION = 6;}
+\DoxyCodeLine{70         \mbox{\hyperlink{class_employee_ae46cd853942598baa48f11968d114d9b}{SetUpgradeCommissions}}(\mbox{\hyperlink{class_employee_ad173b3592f1ba045bf8e9cb8ae1ff762}{GetUpgradesSold}}() * UPGRADES\_COMMISSION);}
+\DoxyCodeLine{71 }
+\DoxyCodeLine{72     \}}
+\DoxyCodeLine{73 }
+\DoxyCodeLine{83     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_sales_associate_a921cc9e28c0a997c877120903c79fd2c}{AccessoryCommissions}}() noexcept\textcolor{keyword}{ override }\{}
+\DoxyCodeLine{84         \textcolor{keyword}{constexpr} \textcolor{keywordtype}{double} SIXTEEN\_PERCENT = 0.16;}
+\DoxyCodeLine{85         \textcolor{keyword}{constexpr} \textcolor{keywordtype}{double} FOURTEEN\_PERCENT = 0.14;}
+\DoxyCodeLine{86         \textcolor{keywordtype}{double} percentage\_of\_sales\{\};}
+\DoxyCodeLine{87         \textcolor{keywordflow}{if} (\mbox{\hyperlink{class_employee_abc0b98f42ed5ea5edae2e1fecde35113}{GetGoalReached}}() == 1) \{}
+\DoxyCodeLine{88             percentage\_of\_sales = SIXTEEN\_PERCENT;}
+\DoxyCodeLine{89         \}}
+\DoxyCodeLine{90         \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{91             percentage\_of\_sales = FOURTEEN\_PERCENT;}
+\DoxyCodeLine{92         \}}
+\DoxyCodeLine{93         \mbox{\hyperlink{class_employee_a83cc7f9832a5fc9fd6bd296c7337e9bf}{SetAccessoryCommissions}}(\mbox{\hyperlink{class_employee_ad7da12d6ba765d4bbe9eee508b35ea2f}{GetAccessoriesSold}}() * percentage\_of\_sales);}
+\DoxyCodeLine{94     \}}
+\DoxyCodeLine{95 }
+\DoxyCodeLine{96 }
+\DoxyCodeLine{104     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_sales_associate_a935904b574b9256f540e5d5f560c71cd}{TotalCommissions}}() noexcept\textcolor{keyword}{ override }\{}
+\DoxyCodeLine{105 }
+\DoxyCodeLine{106         \mbox{\hyperlink{class_sales_associate_ae44be8a53e1ef7cf51ee3c80338f9a62}{NewAccountCommissions}}();}
+\DoxyCodeLine{107         \mbox{\hyperlink{class_sales_associate_a1ae5b4e15f757c9010b6556ca222023f}{UpgradeCommissions}}();}
+\DoxyCodeLine{108         \mbox{\hyperlink{class_sales_associate_a921cc9e28c0a997c877120903c79fd2c}{AccessoryCommissions}}();}
+\DoxyCodeLine{109         \mbox{\hyperlink{class_employee_a6fbadd1c8a0c56fa1b598983fa55cd40}{SetTotalCommissions}}(\mbox{\hyperlink{class_employee_a0572191ad50702dadb5ef7b98fdea2a8}{GetNewAccountCommissions}}() + \mbox{\hyperlink{class_employee_ae533558e802cc9cd4728b85e838a744c}{GetUpgradeCommissions}}() + \mbox{\hyperlink{class_employee_ac777f6d7248bf445897db42c36bd61d5}{GetAccessoryCommissions}}());}
+\DoxyCodeLine{110     \}}
+\DoxyCodeLine{111 \};}
+\DoxyCodeLine{112 }
+\DoxyCodeLine{113 \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

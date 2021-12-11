@@ -24,7 +24,7 @@ public:
 	/**
 	 * @brief SalesAssociate default constructor.
 	*/
-	SalesAssociate() noexcept { }
+	SalesAssociate() noexcept = default;
 
 	/**
 	 * @brief SalesAssociate Initialization list constructor definition, calls constructor of base class Employee.

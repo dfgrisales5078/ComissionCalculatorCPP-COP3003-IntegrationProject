@@ -1,0 +1,114 @@
+\hypertarget{class_sales_associate}{}\doxysection{Sales\+Associate Class Reference}
+\label{class_sales_associate}\index{SalesAssociate@{SalesAssociate}}
+Inheritance diagram for Sales\+Associate\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_sales_associate}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_sales_associate_a9c6444a6b94de8a159d9cd839f99f476}\label{class_sales_associate_a9c6444a6b94de8a159d9cd839f99f476}} 
+{\bfseries Sales\+Associate} () noexcept=default
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{class_sales_associate}{Sales\+Associate}} default constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_sales_associate_a0b5b04660978c04531b5bf0312e7a841}{Sales\+Associate}} (std\+::string employee\+\_\+name, int new\+\_\+accounts\+\_\+sold, int upgrades\+\_\+sold, double accessories\+\_\+sold, int goal\+\_\+reached)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{class_sales_associate}{Sales\+Associate}} Initialization list constructor definition, calls constructor of base class \mbox{\hyperlink{class_employee}{Employee}}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_sales_associate_ae44be8a53e1ef7cf51ee3c80338f9a62}{New\+Account\+Commissions}} () noexcept override
+\begin{DoxyCompactList}\small\item\em Overwritten function to set sales associate\textquotesingle{}s new account commissions. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_sales_associate_a1ae5b4e15f757c9010b6556ca222023f}{Upgrade\+Commissions}} () noexcept override
+\begin{DoxyCompactList}\small\item\em Overwritten function to calculate sales associate\textquotesingle{}s upgrades commissions. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_sales_associate_a921cc9e28c0a997c877120903c79fd2c}{Accessory\+Commissions}} () noexcept override
+\begin{DoxyCompactList}\small\item\em Overwritten function to calculate sales associate\textquotesingle{}s accessory commissions. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_sales_associate_a935904b574b9256f540e5d5f560c71cd}{Total\+Commissions}} () noexcept override
+\begin{DoxyCompactList}\small\item\em calculates total employee\textquotesingle{}s commission. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_sales_associate_a0b5b04660978c04531b5bf0312e7a841}\label{class_sales_associate_a0b5b04660978c04531b5bf0312e7a841}} 
+\index{SalesAssociate@{SalesAssociate}!SalesAssociate@{SalesAssociate}}
+\index{SalesAssociate@{SalesAssociate}!SalesAssociate@{SalesAssociate}}
+\doxysubsubsection{\texorpdfstring{SalesAssociate()}{SalesAssociate()}}
+{\footnotesize\ttfamily Sales\+Associate\+::\+Sales\+Associate (\begin{DoxyParamCaption}\item[{std\+::string}]{employee\+\_\+name,  }\item[{int}]{new\+\_\+accounts\+\_\+sold,  }\item[{int}]{upgrades\+\_\+sold,  }\item[{double}]{accessories\+\_\+sold,  }\item[{int}]{goal\+\_\+reached }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\mbox{\hyperlink{class_sales_associate}{Sales\+Associate}} Initialization list constructor definition, calls constructor of base class \mbox{\hyperlink{class_employee}{Employee}}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em employee\+\_\+name} & -\/ name. \\
+\hline
+{\em new\+\_\+accounts\+\_\+sold} & -\/ new accounts sold. \\
+\hline
+{\em upgrades\+\_\+sold} & -\/ upgrades sold. \\
+\hline
+{\em accessories\+\_\+sold} & -\/ dollar amount of accessories sold. \\
+\hline
+{\em goal\+\_\+reached} & -\/ goal reached (1 or 2). \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_sales_associate_a921cc9e28c0a997c877120903c79fd2c}\label{class_sales_associate_a921cc9e28c0a997c877120903c79fd2c}} 
+\index{SalesAssociate@{SalesAssociate}!AccessoryCommissions@{AccessoryCommissions}}
+\index{AccessoryCommissions@{AccessoryCommissions}!SalesAssociate@{SalesAssociate}}
+\doxysubsubsection{\texorpdfstring{AccessoryCommissions()}{AccessoryCommissions()}}
+{\footnotesize\ttfamily void Sales\+Associate\+::\+Accessory\+Commissions (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}, {\ttfamily [noexcept]}}
+
+
+
+Overwritten function to calculate sales associate\textquotesingle{}s accessory commissions. 
+
+The total accessory commission is the dollar amount sold times the percentage of commission paid depending on goal reached. If sales associate reached goal 1, commission is 16\% of the dollar amount sold. If sales associate reached goal 2, commission is 14\% of the dollar amount sold. 
+
+Implements \mbox{\hyperlink{class_employee_a7ac97eee41d972251fd97c29a5cffe77}{Employee}}.
+
+\mbox{\Hypertarget{class_sales_associate_ae44be8a53e1ef7cf51ee3c80338f9a62}\label{class_sales_associate_ae44be8a53e1ef7cf51ee3c80338f9a62}} 
+\index{SalesAssociate@{SalesAssociate}!NewAccountCommissions@{NewAccountCommissions}}
+\index{NewAccountCommissions@{NewAccountCommissions}!SalesAssociate@{SalesAssociate}}
+\doxysubsubsection{\texorpdfstring{NewAccountCommissions()}{NewAccountCommissions()}}
+{\footnotesize\ttfamily void Sales\+Associate\+::\+New\+Account\+Commissions (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}, {\ttfamily [noexcept]}}
+
+
+
+Overwritten function to set sales associate\textquotesingle{}s new account commissions. 
+
+The total new account commission is the number of new accounts sold times the commission per account depending on goal reached. If sales associate reached goal 1, commission is \$9 per new account. If sales associate reached goal 2, commission is \$7 per new account. 
+
+Implements \mbox{\hyperlink{class_employee_ac1e19b6d2415acc2a529da0b72b81fea}{Employee}}.
+
+\mbox{\Hypertarget{class_sales_associate_a935904b574b9256f540e5d5f560c71cd}\label{class_sales_associate_a935904b574b9256f540e5d5f560c71cd}} 
+\index{SalesAssociate@{SalesAssociate}!TotalCommissions@{TotalCommissions}}
+\index{TotalCommissions@{TotalCommissions}!SalesAssociate@{SalesAssociate}}
+\doxysubsubsection{\texorpdfstring{TotalCommissions()}{TotalCommissions()}}
+{\footnotesize\ttfamily void Sales\+Associate\+::\+Total\+Commissions (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}, {\ttfamily [noexcept]}}
+
+
+
+calculates total employee\textquotesingle{}s commission. 
+
+Calls other methods to set commissions from new accounts, upgrades, and accessories sold. Then adds all of them together. 
+
+Reimplemented from \mbox{\hyperlink{class_employee_a52d2e30cd8053390ebca0bcc82340bc0}{Employee}}.
+
+\mbox{\Hypertarget{class_sales_associate_a1ae5b4e15f757c9010b6556ca222023f}\label{class_sales_associate_a1ae5b4e15f757c9010b6556ca222023f}} 
+\index{SalesAssociate@{SalesAssociate}!UpgradeCommissions@{UpgradeCommissions}}
+\index{UpgradeCommissions@{UpgradeCommissions}!SalesAssociate@{SalesAssociate}}
+\doxysubsubsection{\texorpdfstring{UpgradeCommissions()}{UpgradeCommissions()}}
+{\footnotesize\ttfamily void Sales\+Associate\+::\+Upgrade\+Commissions (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}, {\ttfamily [noexcept]}}
+
+
+
+Overwritten function to calculate sales associate\textquotesingle{}s upgrades commissions. 
+
+The total upgrade commission is the number of upgrades sold times \$6. 
+
+Implements \mbox{\hyperlink{class_employee_aec18558739f48dc722363b8606e624b3}{Employee}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/diego/\+One\+Drive -\/ Florida Gulf Coast University/\+Visual\+Studio/\+Integration\+Project/\mbox{\hyperlink{_sales_associate_8h}{Sales\+Associate.\+h}}\end{DoxyCompactItemize}

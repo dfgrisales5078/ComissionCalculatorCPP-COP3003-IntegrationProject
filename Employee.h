@@ -194,7 +194,7 @@ public:
 	 * @brief public function to get the goal reached.
 	 * @return - goal reached.
 	*/
-	int GetGoalReached() noexcept {
+	auto GetGoalReached() noexcept {
 		return m_goal_reached;
 	}
 
@@ -202,7 +202,7 @@ public:
 	 * @brief public function to get total new account commissions. 
 	 * @return - total new account commissions.
 	*/
-	int GetNewAccountCommissions() noexcept {
+	auto GetNewAccountCommissions() noexcept {
 		return m_new_account_commissions;
 	}
 
@@ -210,7 +210,7 @@ public:
 	 * @brief public function to get total upgrade commissions. 
 	 * @return - total upgrade commissions. 
 	*/
-	int GetUpgradeCommissions() noexcept {
+	auto GetUpgradeCommissions() noexcept {
 		return m_upgrade_commissions;
 	}
 
@@ -218,7 +218,7 @@ public:
 	 * @brief public function to get total accessory commissions. 
 	 * @return total accessory commissions. 
 	*/
-	double GetAccessoryCommissions() noexcept {
+	auto GetAccessoryCommissions() noexcept {
 		return m_accessory_commissions;
 	}
 	
