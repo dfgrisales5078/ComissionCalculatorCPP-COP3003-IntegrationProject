@@ -8,7 +8,6 @@
 
  */
 
-
 #include "Employee.h"
 #include <string>
 
@@ -27,7 +26,6 @@ Employee::Employee(std::string employee_name, int new_accounts_sold, int upgrade
 	SetAccessoriesSold(accessories_sold);
 	m_goal_reached = goal_reached;
 }
-
 
 
 // Employee class method definitions:

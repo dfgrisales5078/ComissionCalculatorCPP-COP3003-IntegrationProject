@@ -9,7 +9,6 @@
 
  */
 
-
 #ifndef SALESASSOCIATE_H
 #define SALESASSOCIATE_H
 #include "Employee.h"
@@ -92,7 +91,6 @@ public:
 		}
 		SetAccessoryCommissions(GetAccessoriesSold() * percentage_of_sales);
 	}
-
 
 	/**
 	 * @brief calculates total employee's commission.

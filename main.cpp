@@ -107,9 +107,6 @@ int main() noexcept {
 
 
 
-
-
-
 // LO3
 // In computer science, dynamic dispatch is the process of selecting which implementation of a polymorphic 
 // operation(method or function) to call at run time.It is commonly employed in, and considered a prime 
@@ -139,6 +136,7 @@ int main() noexcept {
 // resources used:
 // https://www.learncpp.com/
 // https://www.cplusplus.com/
+// https://sites.google.com/site/profvanselow/course/cop-3003/lessons-3003
 // https://sites.google.com/site/profvanselow/course/cop-3003/projects-3003
 // https://en.cppreference.com/w/
 // https://devdocs.io/cpp/
