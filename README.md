@@ -8,7 +8,7 @@
 
 #### Project Class Diagram:
 
-![IntegrationProject](CommissionCalculatorClassDiagram.png)
+
 
  #### Error List before vs after doing Code Analysis:
  
