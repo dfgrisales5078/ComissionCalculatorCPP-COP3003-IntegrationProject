@@ -19,8 +19,8 @@
 int main() noexcept {
 
 	std::string employee_name{};
-	double new_accounts_sold{};
-	double upgrades_sold{};
+	int new_accounts_sold{};
+	int upgrades_sold{};
 	double accessories_sold{};
 	int goal_reached{};
 	int type_of_employee{};

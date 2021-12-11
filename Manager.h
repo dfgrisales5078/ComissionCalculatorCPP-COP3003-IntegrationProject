@@ -14,8 +14,7 @@
 #include "Employee.h"
 
 
-constexpr double EIGHTEEN_PERCENT = 0.18;
-constexpr double SIXTEEN_PERCENT = 0.16;
+
 constexpr int UPGRADES_COMMISSION = 7;
 
 class Manager : public Employee {
@@ -38,7 +37,6 @@ public:
 		: Employee{ employee_name, new_accounts_sold, upgrades_sold, accessories_sold, goal_reached } { }
 
 
-
 	/**
 	* @brief Overwritten function to calculate manager's new account commissions.
 	*
@@ -49,7 +47,6 @@ public:
 	*
 	*/
 	void NewAccountCommissions() noexcept override {
-
 
 		double commission_per_account{};
 		constexpr int NEW_ACCT_GOAL_1COMMISSION = 10;
@@ -84,6 +81,8 @@ public:
 	*
 	*/
 	void AccessoryCommissions() noexcept override {
+		constexpr double EIGHTEEN_PERCENT = 0.18;
+		constexpr double SIXTEEN_PERCENT = 0.16;
 		double percentage_of_sales{};
 		if (GetGoalReached() == 1) {
 			percentage_of_sales = EIGHTEEN_PERCENT;
@@ -95,13 +94,13 @@ public:
 	}
 
 	/**
-	* @brief Sets total employee's commission.
+	* @brief Calculates total employee's commission.
 	*
 	* Calls other methods to set commissions from new accounts,
 	* upgrades, and accessories sold. Then adds all of them together.
 	 *
 	*/
-	void TotalCommissions() noexcept {
+	void TotalCommissions() noexcept override {
 		NewAccountCommissions();
 		UpgradeCommissions();
 		AccessoryCommissions();

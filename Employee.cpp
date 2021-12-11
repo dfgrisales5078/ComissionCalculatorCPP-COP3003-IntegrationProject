@@ -33,7 +33,7 @@ Employee::Employee(std::string employee_name, int new_accounts_sold, int upgrade
 // Employee class method definitions:
 
 /**
- * @brief Sets total employee's commission.
+ * @brief Calculates total employee's commission.
  * 
  * Calls other methods to set commissions from new accounts, 
  * upgrades, and accessories sold. Then adds all of them together. 

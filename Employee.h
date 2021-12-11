@@ -26,11 +26,11 @@ class Employee {
 	// LO6
 private:
 	std::string m_employee_name{};
-	double m_new_accounts_sold{};
-	double m_upgrades_sold{};
+	int m_new_accounts_sold{};
+	int m_upgrades_sold{};
 	double m_accessories_sold{};
-	double m_new_account_commissions{};
-	double m_upgrade_commissions{};
+	int m_new_account_commissions{};
+	int m_upgrade_commissions{};
 	double m_accessory_commissions{};
 	int m_goal_reached{};
 
@@ -92,15 +92,15 @@ public:
 	 * @param goal - goal reached (1 or 2).
 	 * @return void
 	*/
-	void SetGoalReached(int goal) noexcept {
-		m_goal_reached = goal;
+	void SetGoalReached(int goal_reached) noexcept {
+		m_goal_reached = goal_reached;
 	}
 
 	/**
 	 * @brief public function to set private member m_new_account_commissions outside of the class.
 	 * @param new_account_commissions 
 	*/
-	void SetNewAccountCommissions(double new_account_commissions) noexcept {
+	void SetNewAccountCommissions(int new_account_commissions) noexcept {
 		m_new_account_commissions = new_account_commissions;
 	}
 
@@ -109,7 +109,7 @@ public:
 	 * @param upgrade_commissions 
 	 * @return 
 	*/
-	void SetUpgradeCommissions (double upgrade_commissions) noexcept {
+	void SetUpgradeCommissions (int upgrade_commissions) noexcept {
 		m_upgrade_commissions = upgrade_commissions;
 	}
 
@@ -154,7 +154,7 @@ public:
 	/**
 	 * @brief Sets total employee's commission. Function defined in Employee.cpp.
 	*/
-	void TotalCommissions();
+	virtual void TotalCommissions();
 
 	// get methods:
 
@@ -178,7 +178,7 @@ public:
 	 * @brief public function to get number of upgrades sold.
 	 * @return - number of upgrades sold.
 	*/
-	double GetUpgradesSold() noexcept {
+	auto GetUpgradesSold() noexcept {
 		return m_upgrades_sold;
 	}
 
@@ -186,7 +186,7 @@ public:
 	 * @brief public function to get total dollar amount of accessories sold.
 	 * @return - dollar amount of accessories sold.
 	*/
-	double GetAccessoriesSold() noexcept {
+	auto GetAccessoriesSold() noexcept {
 		return m_accessories_sold;
 	}
 
@@ -202,7 +202,7 @@ public:
 	 * @brief public function to get total new account commissions. 
 	 * @return - total new account commissions.
 	*/
-	double GetNewAccountCommissions() noexcept {
+	int GetNewAccountCommissions() noexcept {
 		return m_new_account_commissions;
 	}
 
@@ -210,7 +210,7 @@ public:
 	 * @brief public function to get total upgrade commissions. 
 	 * @return - total upgrade commissions. 
 	*/
-	double GetUpgradeCommissions() noexcept {
+	int GetUpgradeCommissions() noexcept {
 		return m_upgrade_commissions;
 	}
 
