@@ -14,9 +14,6 @@
 #include "Employee.h"
 
 
-
-constexpr int UPGRADES_COMMISSION = 7;
-
 class Manager : public Employee {
 
 public:
@@ -67,7 +64,7 @@ public:
 	* The total upgrade commission is the number of upgrades sold times $7.
 	*/
 	void UpgradeCommissions() noexcept override {
-		
+		constexpr int UPGRADES_COMMISSION = 7;
 		SetUpgradeCommissions(GetUpgradesSold() * UPGRADES_COMMISSION);
 	}
 

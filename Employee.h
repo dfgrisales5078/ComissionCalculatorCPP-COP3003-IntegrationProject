@@ -33,7 +33,6 @@ private:
 	int m_upgrade_commissions{};
 	double m_accessory_commissions{};
 	int m_goal_reached{};
-
 	double m_total_commissions{};
 
 	// Public fields and functions can be accessed inside and outside of the class.
