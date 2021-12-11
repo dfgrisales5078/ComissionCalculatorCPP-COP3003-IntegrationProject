@@ -8,7 +8,6 @@
 
 #### Project Class Diagram:
 
-![IntegrationProject](ClassDiagram.png)
 
 #### Error List before vs after doing Code Analysis:
  
