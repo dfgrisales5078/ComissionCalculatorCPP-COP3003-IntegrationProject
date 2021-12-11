@@ -7,7 +7,7 @@
 #### Project documentation using Doxygen: https://dfgrisales5078.github.io/IntegrationProject/html/pages.html
 
 #### Project Class Diagram:
-
+![IntegrationProject](ClassDiagram.png)
 
 #### Error List before vs after doing Code Analysis:
  
