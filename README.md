@@ -6,4 +6,9 @@
 
 #### Project documentation using Doxygen: https://dfgrisales5078.github.io/IntegrationProject/html/pages.html
   
-##### COP 3003 - Integration Project implemented using Java: https://github.com/dfgrisales5078/CommissionCalculatorJava-COP3003-IntegrationProject
+#### COP 3003 - Integration Project implemented using Java: https://github.com/dfgrisales5078/CommissionCalculatorJava-COP3003-IntegrationProject
+
+
+### Project Class Diagram:
+
+![WindowsDesktopApp](Commission Calculator Class Diagram .png)
