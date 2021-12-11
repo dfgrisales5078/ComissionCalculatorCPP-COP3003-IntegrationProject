@@ -10,4 +10,10 @@
 
 ![IntegrationProject](CommissionCalculatorClassDiagram.png)
 
+ #### Error List before vs after doing Code Analysis:
+ 
+
+ 
+
+
 #### COP 3003 - Integration Project implemented using Java: https://github.com/dfgrisales5078/CommissionCalculatorJava-COP3003-IntegrationProject
