@@ -11,4 +11,3 @@
 
 ### Project Class Diagram:
 
-![WindowsDesktopApp](Commission Calculator Class Diagram .png)
