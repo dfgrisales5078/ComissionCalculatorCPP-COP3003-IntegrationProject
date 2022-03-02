@@ -10,12 +10,4 @@
 ![IntegrationProject](ClassDiagram.png)
 
 
-#### Error List before vs after doing Code Analysis:
- 
-![IntegrationProject](RunCodeAnalysisBefore.png)
-![IntegrationProject](RunCodeAnalysisAfter.png)
-
-
-
-
 #### COP 3003 - Integration Project implemented using Java: https://github.com/dfgrisales5078/CommissionCalculatorJava-COP3003-IntegrationProject
